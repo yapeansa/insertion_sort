@@ -8,20 +8,16 @@ int main()
 
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
-    // Alocando o vetor dinamicamente
-    vet = (int *)malloc(n * sizeof(int));
-    // Preenchimento do vetor
-    preencher(vet, n);
+    vet = (int *)malloc(n * sizeof(int)); // Alocando o vetor dinamicamente
+    preencher(vet, n);                    // Função para preencher o vetor
 
     printf("SELECTION SORT\n");
     printf("Vetor original (não ordenado):\n");
-    // Imprime os elementos do vetor antes da ordenação
-    imprime(vet, n);
-    // Ordenação do vetor
-    insertion_sort(vet, n);
+    imprime(vet, n); // Imprime os elementos do vetor antes da ordenação
+
+    insertion_sort(vet, n); // Função para ordenar os elementos do vetor
     printf("Vetor ordenado:\n");
-    // Imprime os elementos do vetor após o processo de ordenação
-    imprime(vet, n);
+    imprime(vet, n); // Imprime o vetor com seus elementos ordenados
 
     return 0;
 }
